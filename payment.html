@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Checkout</title>
+    <style>
+        body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+    <script>
+        function processPayment() {
+    // You would typically send the payment details to a secure server for processing.
+    // For simplicity, we'll just show an alert indicating a successful payment.
+
+    alert('Payment successful!');
+    // You can redirect the user to a thank you page or perform other actions here.
+}
+let input=document.getElementById("name");
+if(input.value==" ") {
+    alert('fill the blanks');
+}
+
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="paymentForm">
+            <h1>Payment Checkout</h1>
+
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="namer" placeholder="1234 5678 9012 3456" maxlength="16" required>
+
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="name" placeholder="MM/YY" maxlength="5" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="name" placeholder="123" maxlength="3" required>
+
+            <label for="name">Cardholder Name:</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+
+            <button type="button" onclick="processPayment()">Process Payment</button>
+        </form>
+    </div>
+
+   
+</body>
+
+</html>
